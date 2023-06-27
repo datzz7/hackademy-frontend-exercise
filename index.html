@@ -1,13 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>App</title>
+        <style>
+            input,
+            label,
+            button {
+                display: block;
+                margin-bottom: 10px;
+            }
+            
+            form {
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body style="background-color: peachpuff;">
+        <div style="margin:auto;">
+            <h1 style="font-size: 2.2rem;">Dats' Expense Tracker</h1>
+            <form style="border: 1px solid black; width: 200%">
+                <div style="float:left">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" />
+                </div>
+                
+                <div style="float:right;"> 
+                    <label for="email">Email</label>
+                    <input type="email" id="email"/>
+                    <button  type="submit">Submit</button>
+                </div>
+
+                   
+                
+            </form>
+        </div>
+        <script type="module" src="/main.js"></script>
+    </body>
 </html>
