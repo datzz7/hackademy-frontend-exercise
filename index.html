@@ -13,29 +13,47 @@
                 margin-bottom: 10px;
             }
             
-            form {
+            input {
+                height: 25px;
+            }
+            .inline-input {
                 display: inline-block;
+            }
+
+            h1, h2 {
+                text-align: center;
             }
         </style>
     </head>
     <body style="background-color: peachpuff;">
         <div style="margin:auto;">
             <h1 style="font-size: 2.2rem;">Dats' Expense Tracker</h1>
-            <form style="border: 1px solid black; width: 200%">
-                <div style="float:left">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" />
+            <form>
+                <div class="inline-input">
+                    <label for="description">Description</label>
+                    <input type="text" id="description" style="width:300px;" placeholder="Enter Description"/>
                 </div>
                 
-                <div style="float:right;"> 
-                    <label for="email">Email</label>
-                    <input type="email" id="email"/>
+                <div class="inline-input"> 
+                    <label for="amount">Amount</label>
+                    <input type="amount" id="amount" placeholder="Enter Amount"/>
+                </div>
+                
+                <div class="inline-input">
                     <button  type="submit">Submit</button>
                 </div>
-
                    
-                
             </form>
+
+            <h2>
+                Total Expenses <strong>PHP 2,000.00</strong>
+            </h2>
+            
+            <div style="padding: 30px;">
+                <label for="expenses">My Expenses</label>
+                <textarea  id="expenses" placeholder="Electricity &#10;PHP 200.00&#10;" cols="70"></textarea>
+            </div>
+            
         </div>
         <script type="module" src="/main.js"></script>
     </body>
