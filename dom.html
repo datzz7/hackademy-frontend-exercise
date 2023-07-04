@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DOM Manipulation</title>
+</head>
+
+<body>
+    <form id="form">
+        <input type="text" id="username">
+        <input type="password" id="password">
+        <button id="login">
+            Login
+        </button>
+    </form>
+    <script>
+        
+        document.getElementById("form").addEventListener("submit", function (event) {
+            event.preventDefault()
+            // 1
+            let parent = document.getElementById("form")
+            let username = document.getElementById("username")
+            let password = document.getElementById("password")
+            
+            const errorLabelID = "error-message"
+            let errorLabel = document.getElementById(errorLabelID)
+
+            if (errorLabel !== null){
+                errorLabel.remove()
+            }
+
+            errorLabel = document.createElement("div")
+            errorLabel.id = errorLabelID
+            
+            if (!username?.value) {
+                errorLabel.textContent = "Username cannot be empty."
+                parent.append(errorLabel)
+                return
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -20,7 +20,7 @@
                 display: inline-block;
             }
 
-            h1, h2 {
+            h1, h2 , form{
                 text-align: center;
             }
         </style>
@@ -45,16 +45,20 @@
                    
             </form>
 
+            <div style="padding: 30px;  text-align: center;">
+                <label for="expenses">My Expenses</label>
+                <!-- <textarea  cols="70"><span></span> </textarea> -->
+                <p id="expenses-list">
+                    
+                </p>
+            </div>
             <h2>
-                Total Expenses <strong>PHP 2,000.00</strong>
+                Total Expenses <strong><p id="expense-total"></p></strong>
             </h2>
             
-            <div style="padding: 30px;">
-                <label for="expenses">My Expenses</label>
-                <textarea  id="expenses" placeholder="Electricity &#10;PHP 200.00&#10;" cols="70"></textarea>
-            </div>
+           
             
         </div>
-        <script type="module" src="/main.js"></script>
     </body>
 </html>
+<script type="module" src="/main.js"></script>
